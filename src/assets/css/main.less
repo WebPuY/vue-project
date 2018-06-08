@@ -1,0 +1,499 @@
+@red: #F84F54;
+body{
+  position: relative;
+  width: 6.4rem;
+  margin: 0 auto;
+}
+.borderB{border-bottom: 1px solid #ebebeb;}
+.borderR{border-right: 1px solid #ebebeb;}
+.borderT{border-top: 1px solid #dcdcdc;}
+.marginB20{margin-bottom: .2rem;}
+.textarea-div {
+    width: 100%;
+    min-height: 1.2rem;
+    max-height: 4rem;
+    _height: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 0;
+    padding: .1rem;
+    box-sizing: border-box;
+    // border: 1px solid #dcdcdc;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+    _overflow-y: visible;
+}
+.mint-msgbox{
+  .mint-msgbox-confirm {
+    color: @red;
+    font-size: .28rem;
+    background: #F1F0F0;
+  }
+}
+.pre-html{
+  padding: 0 .2rem;
+  background: #fff;
+  img{
+    max-width: 6rem;
+  }
+}
+.mint-popup-3 {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+// 弹窗
+@keyframes tipMove{
+   0%   { transform: scale(1) }
+   35%  { transform: scale(.8) }
+   70%  { transform: scale(1.1) }
+   100% { transform: scale(1) }
+}
+@keyframes issueAnimate{
+   0%   { transform: scale(.6) }
+   25%  { transform: scale(.7) }
+   50%  { transform: scale(.8) }
+   75%  { transform: scale(.9) }
+   100% { transform: scale(1) }
+}
+// 带loading的按钮
+.loading-btn{
+  .mint-spinner-snake{
+    display: inline-block;
+    height: .3rem !important;
+    width: .3rem !important;
+    position: relative;
+    top: .1rem;
+  }
+}
+// 已加载完毕
+.load-down{
+  text-align: center;
+  line-height: .8rem;
+  background: #F5F5F5;
+  margin-top: .2rem;
+  color: #666;
+}
+// loading效果
+.page-infinite-loading{
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+}
+.no-result{
+  background: url('../img/no_result.png') no-repeat center top;
+  background-size: 1.84rem;
+  text-align: center;
+  // padding-top: 1.7rem;
+  padding-bottom: .3rem;
+  color: #666;
+}
+.no-artical{
+  background: url('../img/center/no_artical.png') no-repeat center center;
+  background-size: 1.3rem;
+  text-align: center;
+  padding-top: 1.7rem;
+  color: #666;
+}
+
+.com-template{
+  width: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .8);
+  z-index: 1000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  .alert-content{
+    border-radius: .06rem;
+    animation: tipMove .4s ;
+    width: 4.9rem;
+    background: #fff;
+    padding-top: .4rem;
+  }
+  .big-loading{
+    width: 2.5rem;
+    height: 2rem;
+    color: #000;
+    text-align: center;
+    animation: none;
+    .txt{
+      margin-top: .3rem;
+    }
+  }
+  .tel{
+    color: #000;
+    text-align: center;
+    .tel-p{
+      margin-bottom: .1rem;
+    }
+    .yzm-w{
+      overflow: hidden;
+      width: 3.2rem;
+      margin: .2rem auto;
+      .yzm{
+        width: 2rem;
+        height: .5rem;
+        float: left;
+        border-bottom: 1px solid #dcdcdc;
+      }
+      input{
+        text-align: center;
+        border: none;
+        width: 1.9rem;
+        height: .44rem;
+      }
+      .yzm-btn{
+        border: none;
+        width: 1.2rem;
+        float: left;
+        background: @red;
+        color: #fff;
+        line-height: .5rem;
+      }
+    }
+  }
+  .tips1{
+    height: 6.8rem;
+    width: 5rem;
+    background: url(../img/zixun/tip_1.png) center 2.6rem no-repeat;
+    background-size: 5rem;
+    animation: issueAnimate .1s ;
+    .box-b{
+      background: #fff;
+      border-radius: .1rem;
+    }
+  }
+  .tips2{
+    padding: 1.7rem .1rem 0;
+    height: 6.8rem;
+    width: 100%;
+    background: url(../img/zixun/tips_2_top.png) center top no-repeat;
+    background-size: 5.15rem;
+    animation: issueAnimate .1s ;
+    .zx-li{
+      background: #fff;
+      border-radius: .1rem;
+      padding: .1rem;
+      .title{
+        color: #000;
+      }
+    }
+    .tip-btn-wrap{
+      padding: 0 .3rem;
+      margin-top: 1rem;
+      overflow: hidden;
+      div{
+        width: 2.6rem;
+        height: .84rem;
+      }
+      .l{
+        float: left;
+        background: url(../img/zixun/no_tip.png) no-repeat;
+        background-size: 2.6rem;
+      }
+      .r{
+        float: right;
+        background: url(../img/zixun/tip_try.png) no-repeat;
+        background-size: 2.6rem;
+      }
+    }
+  }
+  .color-blue{
+    color: #5C99E5;
+  }
+  .vip{
+    padding: .4rem .3rem;
+    color: #000;
+    border-radius: .1rem;
+    position: relative;
+    .p1{
+      margin-bottom: .2rem;
+      font-size: .28rem;
+    }
+    .close{
+      width: .5rem;
+      height: .5rem;
+      position: absolute;
+      top: -.2rem;
+      right: -.2rem;
+      background: url(../img/vip_close.png) no-repeat;
+      background-size: .5rem;
+    }
+    .vip-btn{
+      overflow: hidden;
+      a{
+        display: block;
+        width: 2.1rem;
+        line-height: .6rem;
+        text-align: center;
+        color: #fff;
+      }
+      .be-vip{
+        background: #E0A638;
+      }
+      .left{
+        float: left;
+      }
+      .cancle{
+        background: #F0F0F0;
+        color: #000;
+      }
+      .right{
+        float: right;
+        background: @red;
+      }
+    }
+  }
+  .content{
+    text-align: center;
+    color: #000;
+    margin-bottom: .4rem;
+    .img{
+      width: 1.75rem;
+      height: 1.3rem;
+    }
+  }
+  .foot-btn{
+    height: .86rem;
+    background: #f1f0f0;
+    overflow: hidden;
+    text-align: center;
+    .left{
+      float: left;
+      width: 50%;
+      div{
+        border-right: 1px solid #dcdcdc;
+        line-height: .86rem;
+        color: #acabab;
+        font-size: .28rem;
+      }
+    }
+    .right{
+      border: none;
+      background: none;
+      float: left;
+      width: 50%;
+      line-height: .86rem;
+      font-size: .28rem;
+      color: @red;
+    }
+    .one-btn{
+      line-height: .86rem;
+      font-size: .28rem;
+      color: @red;
+    }
+  }
+}
+.wrap-box{
+  background: #F2F2F2;
+  min-height: 100%;
+}
+.issue-mould{
+  font-size: .3rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 100;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  .containt{
+    width: 100%;
+    animation: issueAnimate .1s ;
+  }
+  p{
+    text-align: center;
+    font-size: .28rem;
+    margin-bottom: .3rem;
+  }
+  .content{
+    margin-top: 1rem;
+    overflow: hidden;
+    padding: 0 1.3rem;
+    div{
+      font-size: .28rem;
+      width: 1.4rem;
+      height: .4rem;
+      padding-top: 1.9rem;
+      text-align: center;
+    }
+    .left{
+      float: left;
+      background: url(../img/article_t1.png) no-repeat;
+      background-size: 1.4rem;
+    }
+    .right{
+      float: right;
+      background: url(../img/article_t2.png) no-repeat;
+      background-size: 1.4rem;
+    }
+  }
+}
+/* 底部nav栏 */
+.v-tab {
+  position: fixed;
+  width: 6.4rem;
+  bottom: 0;
+  height: .94rem;
+  border-top: 1px solid rgba(0, 0, 0, .3);
+  background: #fff;
+  display: -webkit-flex;
+  -webkit-flex-wrap: nowrap;
+  -webkit-justify-content:space-between;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+  box-sizing: border-box;
+  .tab-item {
+    width: 2rem;
+    padding-top: .12rem;
+    box-sizing: border-box;
+    span {
+      display: block;
+      width: 100%;
+      height: .44rem;
+    }
+    .h66{height: .66rem;}
+    p {
+      font-size: .22rem;
+      color: #9a9a9a;
+      text-align: center;
+      line-height: .32rem;
+    }
+    &.info span {
+      background: url(../img/nav_info.png) no-repeat center 0;
+      background-size: .44rem;
+    }
+    &.issue span {
+      background: url(../img/nav_issue.png) no-repeat center 0;
+      background-size: .66rem;
+    }
+    &.center span {
+      background: url(../img/nav_center.png) no-repeat center 0;
+      background-size: .44rem;
+    }
+    &.router-link-active {
+      p {
+        color: @red;
+      }
+      &.info span {
+        background: url(../img/nav_info_a.png) no-repeat center 0;
+        background-size: .44rem;
+      }
+      &.center span {
+        background: url(../img/nav_center_a.png) no-repeat center 0;
+        background-size: .44rem;
+      }
+    }
+  }
+}
+// 资讯
+.information{
+  background: #fff;
+  min-height: 100%;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  .head{
+    background: @red;
+    padding: .12rem 0;
+    .search-w{
+      height: .6rem;
+      line-height: .6rem;
+      width: 5.8rem;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: .04rem;
+      overflow: hidden;
+    }
+    .icon{
+      display: inline-block;
+      height: .6rem;
+      width: .8rem;
+      float: left;
+      background: url(../img/icon_search.png) center center no-repeat;
+      background-size: .33rem .34rem;
+    }
+    input{
+      float: left;
+      width: 4rem;
+      height: .6rem;
+      border: none;
+      font-size: .28rem;
+    }
+    input::-webkit-input-placeholder{
+      color: #d9d9d9;
+    }
+  }
+  .info-nav{
+    padding-top: .1rem;
+    clear: both;
+    height: .7rem;
+    // overflow: hidden;
+    margin-bottom: .1rem;
+    position: relative;
+    .nav{
+      overflow: hidden;
+      width: 5.6rem;
+      float: left;
+      li{
+        width: 1.5rem;
+        float: left;
+        line-height: .7rem;
+        text-align: center;
+        font-size: .28rem;
+      }
+      li:nth-child(1){
+        width: 1rem;
+      }
+      li.active{
+        color: @red;
+      }
+    }
+    .side-nav{
+      position: absolute;
+      top: .7rem;
+      right: 0;
+      width: 2rem;
+      background: #fff;
+      border: 1px solid #dcdcdc;
+      border-right: none;
+      li{
+        border-bottom: 1px solid #dcdcdc;
+        text-align: center;
+        line-height: .6rem;
+      }
+      .active{color: @red;}
+      li:last-child{border-bottom: none;}
+    }
+    .more{
+      width: 0.5rem;
+      padding-left: .2rem;
+      float: left;
+      line-height: .6rem;
+      text-align: center;
+      font-size: .5rem;
+      background: url(../img/zixun/border_bg.png) left 0.06rem no-repeat;
+      background-size: .15rem .6rem;
+    }
+  }
+
+}
